@@ -10,8 +10,8 @@ Main formulas based on:
 - Sutton & Biblarz, "Rocket Propulsion Elements"
 - Anderson, "Fundamentals of Aerodynamics"
 
-Author: [Your name]
-Date: 2024
+Author: [Matteo De Martini]
+Date: 09/12/2025
 """
 
 import streamlit as st
@@ -20,9 +20,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle, Polygon, Circle
 
 
-# ============================================================================
-# CLASS: RocketEngine
-# ============================================================================
+
 class RocketEngine:
     """
     Class for the physical sizing of a rocket engine.
@@ -683,8 +681,8 @@ def main():
             cost_estimator.get_cost_breakdown()  # Calculate if not already done
         
         total_cost_value = cost_estimator.total_cost
-        if total_cost_value > 500000:
-            st.warning(f"⚠️ **Warning:** The estimated cost (${total_cost_value:,.0f}) exceeds the $500,000 threshold. "
+        if total_cost_value > 5000000:
+            st.warning(f"⚠️ **Warning:** The estimated cost (${total_cost_value:,.0f}) exceeds the $500,0000 threshold. "
                       "Consider reducing thrust or optimizing design parameters.")
         elif total_cost_value > 200000:
             st.info(f"ℹ️ The estimated cost is ${total_cost_value:,.0f}. "
